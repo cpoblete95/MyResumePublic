@@ -27,6 +27,9 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        historyApiFallback: true
+    },
     devtool: 'source-map', //will show code in development easier for debugging
     output:{
         path: path.resolve(__dirname, "./webpackBuild"),
