@@ -1,6 +1,6 @@
 .Dropdown {
-    display: inline-block;
-    margin-top: 3px;
+    padding: 10px 15px 0px 15px;
+    height: inherit;
 }
 
 .Dropdown div{
@@ -8,4 +8,8 @@
     height: 3px;
     background-color: white;
     margin: 6px 0;
+}
+
+div.Dropdown:hover {
+    background-color: #111;
 }

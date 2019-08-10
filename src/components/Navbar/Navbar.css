@@ -1,3 +1,7 @@
+.Navbar{
+    max-height: 57px;
+}
+
 .Navbar ul{
     list-style-type: none;
     margin: 0;
@@ -25,12 +29,9 @@
 
 .Navbar .NavbarDropdown {
     float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 9px 15px;
-    text-decoration: none;
-    font-size: 15px;
+    overflow:hidden;
+    height: 57px;
+    width: 57px;
 }
 
 .Navbar .NavbarTitle{
@@ -38,7 +39,7 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 9px 15px;
+    padding: 5px 15px;
     text-decoration: none;
     font-size: 15px;
 }
