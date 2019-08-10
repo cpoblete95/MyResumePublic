@@ -1,0 +1,11 @@
+.Dropdown {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.Dropdown div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}

@@ -1,0 +1,44 @@
+.Navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.Navbar li {
+    float: right;
+}
+  
+.Navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+.Navbar  li a:hover {
+    background-color: #111;
+}
+
+.Navbar .NavbarDropdown {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 9px 15px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.Navbar .NavbarTitle{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 9px 15px;
+    text-decoration: none;
+    font-size: 15px;
+}

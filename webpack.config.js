@@ -10,9 +10,24 @@ module.exports = {
                 test: /\.js$/, 
                 exclude: /node_moudles/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader'
+            }, 
+            {
+                test: /\.css$/,
+                loader: 'css-loader',
+                options: {
+                    modules: true,
+                    modules:{
+                        localIdentName: '[name]__[local]___[hash:base64:5]'
+                    }
+                }
             }
         ]
     },
+    devtool: 'source-map', //will show code in development easier for debugging
     output:{
         path: path.resolve(__dirname, "./webpackBuild"),
         publicPath: path.resolve(__dirname, "/webpackBuild"),
