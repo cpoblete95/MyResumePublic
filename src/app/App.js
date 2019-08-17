@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './App.css';
 import {BrowserRouter as Router} from "react-router-dom"
 
@@ -8,6 +8,9 @@ import Main from '../components/Main/Main';
 
 
 const App = () => {
+    useEffect(() => {
+        console.log("APP RENDERING!")
+    })
     return(
         <div className = {styles.App}>
             <Router>
