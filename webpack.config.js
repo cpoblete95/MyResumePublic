@@ -36,7 +36,10 @@ module.exports = {
         ]
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        // contentBase: './app',
+        // port: 9000,
+        host: '0.0.0.0'
     },
     devtool: 'source-map', //will show code in development easier for debugging
     output:{

@@ -27,7 +27,7 @@
 }
   
 .Navbar  li a:hover {
-    box-shadow: 0 0 20px rgba(33, 33, 33, 0.466); 
+    box-shadow: 0 0 11px rgb(228, 224, 224); 
 }
 
 .Navbar .NavbarDropdown {
@@ -38,9 +38,8 @@
     display: none;
 }
 
-.Navbar .NavbarDropdown:hover{
+.focused{
     box-shadow: 0 0 11px rgb(228, 224, 224); 
-    background-color: green;
 }
 
 .Navbar .NavbarTitle{
@@ -54,9 +53,9 @@
 }
 
 
-/* when width of screen is smaller than 714px 
+/* when width of screen is smaller than 850px 
 hide menu items and show dropdown */
-@media only screen and (max-width: 714px) {
+@media only screen and (max-width: 850px) {
     .Navbar .NavbarDropdown  {
       display: block;
     }

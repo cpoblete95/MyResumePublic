@@ -10,18 +10,18 @@ div.DropdownButton .DropdownBars div{
     margin: 6px 0;
 }
 
-.DropdownButton:hover .DropdownMenu{
+.DropdownButton .showDropdown{
     /* background-color: #111; */
     transition: 1s;
     left:0;
 }
+
 .DropdownMenu {
     display: block;
     position: absolute;
     top: 57px;
-    left: -145px;
-    background-color: rgba(173, 173, 173, 0.21);
-    opacity: 0.95;
+    left: -155px;
+    background-color:rgba(64, 126, 226, 0.62);
     transition: 1s;
 }
 
