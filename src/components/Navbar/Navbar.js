@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className = {styles.Navbar}>
             <ul>
                 <li className = {styles.NavbarDropdown}> <Dropdown/> </li>
-                <li className = {styles.NavbarTitle}><p>TITLE</p></li>
+                <li className = {styles.NavbarTitle}><p>Christophers Portfolio</p></li>
                 <li><Link to = "/contact">Contact</Link></li>
                 <li><Link to = "/projects">Projects</Link></li>
                 <li><Link to = "/aboutMe">About Me</Link></li>

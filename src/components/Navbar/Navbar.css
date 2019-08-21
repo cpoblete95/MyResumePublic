@@ -1,7 +1,10 @@
 .Navbar{
     max-height: 57px;
-    background-color: #333;
+  
     overflow: hidden;
+    border-bottom: solid;
+    border-bottom-color: white;
+    border-bottom-width: 0.1px;
 }
 
 .Navbar ul{
@@ -24,7 +27,7 @@
 }
   
 .Navbar  li a:hover {
-    background-color: #111;
+    box-shadow: 0 0 20px rgba(33, 33, 33, 0.466); 
 }
 
 .Navbar .NavbarDropdown {
@@ -32,6 +35,12 @@
     overflow:hidden;
     height: 57px;
     width: 57px;
+    display: none;
+}
+
+.Navbar .NavbarDropdown:hover{
+    box-shadow: 0 0 11px rgb(228, 224, 224); 
+    background-color: green;
 }
 
 .Navbar .NavbarTitle{
@@ -43,3 +52,16 @@
     text-decoration: none;
     font-size: 15px;
 }
+
+
+/* when width of screen is smaller than 714px 
+hide menu items and show dropdown */
+@media only screen and (max-width: 714px) {
+    .Navbar .NavbarDropdown  {
+      display: block;
+    }
+
+    .Navbar li {
+        display: none;
+    }
+  }

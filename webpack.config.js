@@ -24,6 +24,14 @@ module.exports = {
                         localIdentName: '[name]__[local]___[hash:base64:5]'
                     }
                 }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
             }
         ]
     },

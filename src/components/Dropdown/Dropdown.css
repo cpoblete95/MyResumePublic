@@ -10,28 +10,25 @@ div.DropdownButton .DropdownBars div{
     margin: 6px 0;
 }
 
-.DropdownButton:hover {
-    background-color: #111;
+.DropdownButton:hover .DropdownMenu{
+    /* background-color: #111; */
+    transition: 1s;
+    left:0;
 }
-
 .DropdownMenu {
     display: block;
     position: absolute;
     top: 57px;
-    left: 0px;
-    background-color: rgb(197, 197, 197);
+    left: -145px;
+    background-color: rgba(173, 173, 173, 0.21);
     opacity: 0.95;
+    transition: 1s;
 }
 
 .DropdownButton .DropdownMenu a {
     display: block;
-    /* color: rgb(230, 6, 6);  */
     text-align: center;
     padding: 20px 40px;
     text-decoration: none;
     font-size: 15px;
-}
-  
-.DropdownButton .DropdownMenu a:hover {
-    /* background-color: red; */
 }
