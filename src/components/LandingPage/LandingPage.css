@@ -1,8 +1,10 @@
 
 .LandingPage .AvatarImg {
     vertical-align: middle;
-    width: 275px;
-    height: 275px;
+    width: 40%;
+    height: auto;
+    max-width: 350px;
+    max-height: 350px;
     border-radius: 50%;
-    margin-top: 25px;
+    margin-top: 50px;
 }

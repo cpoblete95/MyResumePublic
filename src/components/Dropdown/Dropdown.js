@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './Dropdown.css';
 
 import {Link} from 'react-router-dom';
@@ -21,7 +21,6 @@ const Dropdown = () => {
                     <div></div>
                     <div></div>  
                 </div>
-                {/* {showDropdown && */}
                 <div className = {`${styles.DropdownMenu} ${showDropdown}`}>
                     <Link to = "/">Home</Link>
                     <Link to = "/resume">Resume</Link>
@@ -29,7 +28,6 @@ const Dropdown = () => {
                     <Link to = "/projects">Projects</Link>
                     <Link to = "/contact">Contact</Link>
                 </div>
-                {/* } */}
             </div>
         </OutsideAlerter>
 

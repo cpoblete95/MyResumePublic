@@ -19,9 +19,12 @@ div.DropdownButton .DropdownBars div{
 .DropdownMenu {
     display: block;
     position: absolute;
-    top: 57px;
-    left: -155px;
-    background-color:rgba(64, 126, 226, 0.62);
+    z-index: 1;
+    top: 58px;
+    left: -381px;
+    width: 45%;
+    height: 100%;
+    background-color: rgba(153, 52, 157, 0.88);
     transition: 1s;
 }
 

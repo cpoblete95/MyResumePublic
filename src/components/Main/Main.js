@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import styles from './Main.css'
@@ -15,6 +15,9 @@ import Resume from '../Resume/Resume';
  */
 
  const Main = () => {
+    useEffect(() => {
+        console.log("Main RENDERING!")
+    },[])
      return(
          <div className = {styles.Main}>
              <Switch>
