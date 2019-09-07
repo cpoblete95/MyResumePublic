@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import styles from './Navbar.css';
 
 import {Link} from 'react-router-dom';
@@ -6,23 +6,23 @@ import Dropdown from '../Dropdown/Dropdown'
 
 const Navbar = () => {
     const [dropDownFocused, setDropdownFocused] = useState(false);
-    useEffect(() => {
-        console.log("NAVBAR RE RENDER")
 
-        return () => {
-            console.log("NAVBAR UNMOUNT")
-        };
-    },[])
     let dropdownFocusedStyle = dropDownFocused ? styles.focused : "";
 
-    const handleDropdownClick = () => {
+    const handleDropdownClick = (event) => {
         setDropdownFocused(!dropDownFocused);
+        return;
     };
 
     return(
         <div className = {styles.Navbar}>
             <ul>
-                <li onClick = {handleDropdownClick} className = {`${styles.NavbarDropdown} ${dropdownFocusedStyle}`}> <Dropdown/> </li>
+                <li onClick = {handleDropdownClick} className = {`${styles.NavbarDropdown} ${dropdownFocusedStyle}`}> 
+                    <Dropdown 
+                    dropDownFocused = {dropDownFocused} 
+                    handleDropdownClick = {handleDropdownClick}
+                    /> 
+                </li>
                 <li className = {styles.NavbarTitle}><p>Christopher's Portfolio</p></li>
                 <li><Link to = "/contact">Contact</Link></li>
                 <li><Link to = "/projects">Projects</Link></li>

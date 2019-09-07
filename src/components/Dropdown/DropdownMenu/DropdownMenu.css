@@ -1,0 +1,20 @@
+.DropdownMenu {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 58px;
+    left: -381px;
+    width: 45%;
+    height: 100%;
+    background-color: rgba(153, 52, 157, 0.88);
+    transition: 1s;
+}
+
+.DropdownMenu.show{
+    transition: 1s;
+    left:0;
+}
+
+.DropdownMenu .DropdownLinks a:hover {
+    box-shadow: 0 0 11px rgb(228, 224, 224); 
+}

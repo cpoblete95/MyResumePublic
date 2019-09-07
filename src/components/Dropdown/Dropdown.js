@@ -3,34 +3,34 @@ import styles from './Dropdown.css';
 
 import {Link} from 'react-router-dom';
 
-import OutsideAlerter from '../OutsideAlerter/OutsideAlerter';
+import DropdownMenu from './DropdownMenu/DropdownMenu';
 
-const Dropdown = () => {
-    const [showDropdownState, setShowDropDownState] = useState(false);
+const Dropdown = (props) => {    
+    useEffect(() => {
+        console.log("MOUNTING DROPDOWN Button");
 
-    let showDropdown = showDropdownState ? styles.showDropdown : "";
+        return () => {
+            console.log("UNMOUNTING DROPDOWN Button")
+        }
+    })
 
-    const toggleDropdown = () => {
-        setShowDropDownState(!showDropdownState);
+    //will either close or open dropdown menu
+    const handleClick = () => {
+        props.handleDropdownClick()
     }
     return(
-        <OutsideAlerter showing = {showDropdownState} setShowing = {setShowDropDownState}>
-            <div id = "slide" className = {styles.DropdownButton} onClick = {toggleDropdown}>
-                <div className = {styles.DropdownBars}>
-                    <div></div>
-                    <div></div>
-                    <div></div>  
-                </div>
-                <div className = {`${styles.DropdownMenu} ${showDropdown}`}>
-                    <Link to = "/">Home</Link>
-                    <Link to = "/resume">Resume</Link>
-                    <Link to = "/aboutMe">About Me</Link>
-                    <Link to = "/projects">Projects</Link>
-                    <Link to = "/contact">Contact</Link>
-                </div>
+        <div id = "dropDownBarBox" className = {styles.DropdownButton} onClick = {props.handleDropdownClick}>
+            <div id = "dropDownBarContainer" className = {styles.DropdownBars}>
+                <div id = "dropdownBar1"></div>
+                <div id = "dropdownBar2"></div>
+                <div id = "dropdownBar3"></div>  
             </div>
-        </OutsideAlerter>
-
+            {/* dropdownMenu */}
+            <DropdownMenu 
+            handleClick = {props.handleDropdownClick} 
+            dropDownFocused = {props.dropDownFocused}
+            />
+        </div>
     )
 }
 
