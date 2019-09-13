@@ -1,11 +1,19 @@
 body {
     margin : 0px; 
 }
-
+@font-face {
+    font-family: 'Antora';
+    src: url('../Assets/Fonts/antaro/Antaro.woff') format('woff'),
+         url('../Assets/Fonts/antaro/Antaro.ttf') format('truetype');
+  }
 * {
-   font-family:  "Trebuchet MS", Helvetica, sans-serif;
+   font-family:  "Antora";
 }
 
+/* * {
+    font-family:  "Trebuchet MS", Helvetica, sans-serif;
+ } */
+ 
 .App {
     /* background: #833ab4;  /* fallback for old browsers */
     /* background: -webkit-linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);  Chrome 10-25, Safari 5.1-6 */

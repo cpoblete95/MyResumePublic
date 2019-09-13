@@ -1,0 +1,36 @@
+.Banner{
+    background-color: black;
+    opacity: 0.8;
+    width: 75%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px 0 10px 0;
+}
+
+.Banner h1{
+    font-size: 5vw;
+    font-weight: bold;
+    color: white;
+}
+
+.Banner hr {
+    border-top: 5px dotted white;
+    width: 50%;
+    margin: auto;
+}
+
+.Banner p {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+}
+
+/* when width of screen is smaller than 850px 
+hide menu items and show dropdown */
+@media only screen and (max-width: 850px) {
+    .Banner p {
+        font-size: 3.4vw;
+    }
+  }
+

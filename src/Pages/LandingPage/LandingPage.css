@@ -1,7 +1,7 @@
 
 .LandingPage .AvatarImg {
     vertical-align: middle;
-    width: 30vw;
+    width: 20%;
     height: auto;
     max-width: 350px;
     max-height: 350px;
@@ -10,9 +10,17 @@
 }
 
 .LandingPage .IntroImg{
-    width: 50%;
+    width: 25vw;
     /* height: 15%; */
     display: block;
     margin: auto;
     padding-top: 20px;
 }
+
+/* when width of screen is smaller than 850px 
+hide menu items and show dropdown */
+@media only screen and (max-width: 850px) {
+    .LandingPage .IntroImg{
+      width: 35vw;
+    }
+  }
