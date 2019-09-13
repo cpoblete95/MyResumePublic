@@ -3,11 +3,11 @@ import {Switch, Route} from 'react-router-dom';
 
 import styles from './Main.css'
 
-import AboutMe from '../AboutMe/AboutMe';
-import Contact from '../Contact/Contact';
-import LandingPage from '../LandingPage/LandingPage';
-import Projects from '../Projects/Projects';
-import Resume from '../Resume/Resume';
+import AboutMe from '../Pages/AboutMe/AboutMe';
+import Contact from '../Pages/Contact/Contact';
+import LandingPage from '../Pages/LandingPage/LandingPage';
+import Projects from '../Pages/Projects/Projects';
+import Resume from '../Pages/Resume/Resume';
 
 /**
  * This will take care of all the routing
