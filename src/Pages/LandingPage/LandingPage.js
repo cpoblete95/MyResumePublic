@@ -6,7 +6,6 @@ import Intro from '../../Images/Intro.png';
 
 import Banner from '../../components/Banner/Banner';
 
-
 const LandingPage = () => {
     useEffect(() => {
         //scroll to top of page when page loaded

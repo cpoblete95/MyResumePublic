@@ -1,0 +1,52 @@
+.Contact{
+    height: 100%;
+    background: white;
+}
+
+.Contact .Modal{
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    position: fixed;
+    width: 100%;
+}
+
+.Contact .Dialog{
+    overflow: auto;
+    position: relative;
+    background: white;
+    display: inline-block;
+    width: 76vw;
+    height: 100%;
+    max-height: 73vh;
+    margin: 26px auto;
+    border: rgb(45, 133, 189) solid 2px;
+    padding: 20px;
+}
+
+.Contact .LeftContent{
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+.Contact .RightContent{
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+.Contact .LeftContent img{
+        width: 43%;
+        border-radius: 6%;
+}
+
+.Contact h1{
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.LeftContent p{
+    padding: 20px 0;
+    width: 77%;
+    margin: auto;
+}

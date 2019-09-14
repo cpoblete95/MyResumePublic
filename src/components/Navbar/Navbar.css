@@ -19,6 +19,7 @@
 
 .Navbar li {
     float: right;
+    padding-right: 3px;
 }
   
 .Navbar li a {

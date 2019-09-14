@@ -26,11 +26,33 @@
     padding: 15px;
 }
 
+.Banner .SocialLinks{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 18%;
+}
+
+.Banner .SocialLinks svg{
+    color: white;
+    font-size: 5em;
+}
+
+.Banner .SocialLinks svg:hover{
+    color: #ada9a9;
+}
 /* when width of screen is smaller than 850px 
 hide menu items and show dropdown */
 @media only screen and (max-width: 850px) {
     .Banner p {
         font-size: 3.4vw;
+    }
+    .Banner .SocialLinks{
+        width: 38%;
+    }
+    .Banner .SocialLinks svg{
+        color: white;
+        font-size: 3em;
     }
   }
 

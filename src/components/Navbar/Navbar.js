@@ -25,7 +25,7 @@ const Navbar = () => {
                 </li>
                 <li className = {styles.NavbarTitle}><p>Christopher's Portfolio</p></li>
                 <li><Link to = "/contact">Contact</Link></li>
-                <li><Link to = "/projects">Projects</Link></li>
+                {/* <li><Link to = "/projects">Projects</Link></li> */}
                 <li><Link to = "/aboutMe">About Me</Link></li>
                 <li><Link to = "/resume">Resume</Link></li>
                 <li><Link to = "/">Home</Link></li>

@@ -6,8 +6,14 @@ body {
     src: url('../Assets/Fonts/antaro/Antaro.woff') format('woff'),
          url('../Assets/Fonts/antaro/Antaro.ttf') format('truetype');
   }
+
+@font-face {
+    font-family: 'YorkBailHill';
+    src: url('../Assets/Fonts/york_baile_hill/yorkbailehill.woff') format('woff'),
+         url('../Assets/Fonts/york_baile_hill/yorkbailehill.ttf') format('truetype');
+}
 * {
-   font-family:  "Antora";
+   font-family:  "YorkBailHill";
 }
 
 /* * {

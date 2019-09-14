@@ -1,3 +1,6 @@
+.LandingPage {
+  height: 100%;
+}
 
 .LandingPage .AvatarImg {
     vertical-align: middle;
@@ -22,5 +25,8 @@ hide menu items and show dropdown */
 @media only screen and (max-width: 850px) {
     .LandingPage .IntroImg{
       width: 35vw;
+    }
+    .LandingPage .AvatarImg{
+      width: 35%;
     }
   }

@@ -44,7 +44,7 @@ const DropdownMenu = (props) => {
             <Link id = "dropdownButtonLink1" to = "/">Home</Link>
             <Link id = "dropdownButtonLink2" to = "/resume">Resume</Link>
             <Link id = "dropdownButtonLink3" to = "/aboutMe">About Me</Link>
-            <Link id = "dropdownButtonLink4" to = "/projects">Projects</Link>
+            {/* <Link id = "dropdownButtonLink4" to = "/projects">Projects</Link> */}
             <Link id = "dropdownButtonLink5" to = "/contact">Contact</Link>
             </div>
 
