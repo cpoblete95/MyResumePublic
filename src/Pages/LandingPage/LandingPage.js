@@ -14,11 +14,11 @@ const LandingPage = () => {
     
     return(
         <div className = {styles.LandingPage}>
+
             <img className = {styles.AvatarImg} src = {Avatar}></img>
             <img className = {styles.IntroImg} src = {Intro}></img>
             <Banner/>
             {/* <h1>I'm Christopher.</h1> */}
-
         </div>
     )
 }

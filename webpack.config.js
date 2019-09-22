@@ -8,7 +8,7 @@ module.exports = {
         rules:[
             {
                 test: /\.js$/, 
-                exclude: /node_moudles/,
+                exclude: /node_modules/,
                 loader: 'babel-loader'
             },
             {
@@ -16,8 +16,13 @@ module.exports = {
                 loader: 'style-loader'
             }, 
             {
+              test: /bootstrap.min.css$/,
+              loader: 'css-loader'
+            }, 
+            {
                 test: /\.css$/,
                 loader: 'css-loader',
+                exclude: /bootstrap.min.css$/,
                 options: {
                     modules: true,
                     modules:{
@@ -30,6 +35,10 @@ module.exports = {
                 use: [
                   {
                     loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: '/images/'
+                    }
                   },
                 ],
             },
@@ -40,7 +49,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                       name: '[name].[ext]',
-                      outputPath: 'fonts/'
+                      outputPath: '/fonts/'
                     }
                   }
                 ]

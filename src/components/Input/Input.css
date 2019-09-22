@@ -1,0 +1,14 @@
+.Input{
+
+}
+
+.Input input{
+    border-radius: 2px;
+    width: 100%;
+    border: 1px solid #cacaca;
+}
+
+.Input label{
+    float: left;
+    margin-bottom: 0px;
+}

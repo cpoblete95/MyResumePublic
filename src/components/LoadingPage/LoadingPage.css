@@ -1,0 +1,31 @@
+.LoadingPage{
+    position: fixed;
+    z-index: 9999;
+    background: white;
+    top: 0px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.LoadingPage.MainTransition{
+    top: -800px;
+    transition: 2s;
+}
+
+.LoadingPage .Spinner{
+    display: inline-block;
+    margin: auto;
+}
+
+.LoadingPage .NotLoading{
+    opacity: 0;
+    font-size: 6em;
+}
+
+.LoadingPage .NotLoading.Transition{
+    opacity: 100;
+    transition: 3s;
+}
