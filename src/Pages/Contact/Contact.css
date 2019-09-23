@@ -30,7 +30,7 @@
     width: 50%;
     height: 100%;
     border-right: 1px #ababaf7a solid;
-    min-width: 460px;
+    /* min-width: 460px; */
     /* position: absolute;
     left: 0; */
 }
@@ -39,13 +39,13 @@
     float: right;
     height: 100%;
     width: 50%;
-    min-width: 460px;
+    /* min-width: 460px; */
     /* position: absolute;
     right: 0; */
 }
 
 .Contact .LeftContent img{
-    width: 43%;
+    width: 40%;
     border-radius: 6%;
     box-shadow: 1px 4px 27px -6px rgba(0,0,0,0.75);
     margin-top: 30px;
@@ -75,6 +75,14 @@
 .Contact button{
     margin-top: 10px;
 }
+.Contact button:hover{
+    background: #bdbdbd;
+}
+
+.Contact button:focus{
+    background: #bdbdbd;
+}
+
 
 .LeftContent p{
     padding: 20px 0;
@@ -114,14 +122,14 @@ hide menu items and show dropdown */
         width: 100%;
         min-width: 100%;
         padding-top: 20px;
-        max-height: 60vh;
+        max-height: 72vh;
     }
     .Contact .LeftContent{
         width: 100%;
         min-width: 100%;
         border-right: 0px;
         border-bottom: 1px #ababaf7a solid;
-        max-height: 60vh;
+        max-height: 72vh;
     }
         
   }

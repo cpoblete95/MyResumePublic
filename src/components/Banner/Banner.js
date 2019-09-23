@@ -6,7 +6,7 @@ const Banner = () => {
 
     return(
         <div className = {styles.Banner}>
-            <h1>Software Developer</h1>
+            <h1>Software Engineer</h1>
             <hr/>
             <p>HTML/CSS | Java | Javascript | React | AngularJS</p>
 

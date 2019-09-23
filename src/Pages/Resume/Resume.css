@@ -1,0 +1,66 @@
+.Resume{
+    height: 100%;
+    overflow: auto;
+    background: white;
+}
+
+.Resume .LeftContent{
+    float: left;
+    width: 30%;
+    height: 100%;
+    background: white;
+}
+
+.Resume .LeftContent h1{
+    float: left;
+    margin-top: 100px;
+    padding-left: 10px;
+}
+
+.Resume .LeftContent h3{
+    float: left;
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #b1b1b1;
+}
+
+.Resume .LeftContent p{
+    clear: both;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.Resume .LeftContent hr{
+    clear: both;
+    float: left;
+    border: 0;
+    height: 3px;
+    background-color: #3d98cc;
+    width: 50%;
+}
+
+.Resume .LeftContent img{
+    width: 45%;
+    border-radius: 6%;
+    box-shadow: 1px 4px 27px -6px rgba(0,0,0,0.75);
+    margin-top: 50px;
+}
+.Resume .RightContent{
+    float: right;
+    height: 100%;
+    width: 70%;
+    padding: 20px;
+    /* background: #4d4d4d9a */
+}
+
+.Resume .RightContent .RightContentBox{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: #000000d9;
+}
+
+.Resume .RightContent h1{
+    float: left;
+    color: white;
+}
