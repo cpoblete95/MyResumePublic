@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './Contact.css';
 
 import Avatar from '../../Images/Avatar.png';
+import RealAvatar from '../../Images/RealAvatar.png';
 import Input from '../../components/Input/Input';
 import TextArea from '../../components/TextArea/TextArea';
 import emailMask from 'text-mask-addons/dist/emailMask'
@@ -62,11 +63,18 @@ const Contact = () => {
             />
             <div className = {styles.Modal}>
                 <div className = {styles.Dialog}>
+                    {/* LEFT CONTENT */}
                     <div className = {styles.LeftContent}>
                         <h1>Christopher Poblete</h1>
-                        <img className = {styles.ContactAvatar} src = {Avatar}></img>
-                        <p>Dynamic Software Engineer with 2+ years of experience. Skilled at developing turnkey, testable and efficient code. Implemented Jasmine unit test cases for a UnitedHealth Group project that covers 97% AngularJS code that helps prevent future issues. A conscientious fast learner who can easily adapt to changing business requirements.</p>
+                        <img className = {styles.ContactAvatar} src = {RealAvatar}></img>
+                        {/* <p>Dynamic Software Engineer with 2+ years of experience. Skilled at developing turnkey, testable and efficient code. Implemented Jasmine unit test cases for a UnitedHealth Group project that covers 97% AngularJS code that helps prevent future issues. A conscientious fast learner who can easily adapt to changing business requirements.</p> */}
+                        <div className = {styles.ContactInfoElement}>
+                                <FontAwesomeIcon icon={['far', 'envelope']} />
+                                <h2>chrispoblete95@gmail.com</h2>
+                        </div>
                     </div>
+
+                    {/* RIGHT CONTENT */}
                     <div className = {styles.RightContent}>
                         <h1>Contact Me</h1>
                         <hr/>

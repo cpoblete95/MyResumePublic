@@ -31,7 +31,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 use: [
                   {
                     loader: 'file-loader',
@@ -58,13 +58,13 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-        // contentBase: './app',
+        // contentBase: './',
         // port: 9000,
         host: '0.0.0.0'
     },
     devtool: 'source-map', //will show code in development easier for debugging
     output:{
-        path: path.resolve(__dirname, "./webpackBuild"),
+        path: path.resolve(__dirname, "./src/webpackBuild"),
         publicPath: path.resolve(__dirname, "/webpackBuild"),
         filename: "resume.min.js",
     },

@@ -14,10 +14,12 @@
     overflow: auto;
     position: relative;
     background: white;
-    display: inline-block;
-    width: 76vw;
+    display: flex;
+    width: 100%;
+    max-width: 73vw;
     height: 100%;
-    max-height: 64vh;
+    max-height: 70vh;
+    /* min-width: 820px; */
     margin: 26px auto;
     border: rgb(45, 133, 189) solid 2px;
     padding: 20px;
@@ -27,12 +29,18 @@
     float: left;
     width: 50%;
     border-right: 1px #ababaf7a solid;
+    min-width: 460px;
+    /* position: absolute;
+    left: 0; */
 }
 
 .Contact .RightContent{
     float: right;
     height: 100%;
     width: 50%;
+    min-width: 460px;
+    /* position: absolute;
+    right: 0; */
 }
 
 .Contact .LeftContent img{
@@ -76,16 +84,43 @@
     /* margin: 0 0 20px 20px; */
 }
 
-.RightContent .ContactInfoElement{
+.LeftContent .ContactInfoElement{
     width: 100%;
-    margin: 50px 0;
+    margin: 30px 0 80px 0;
     height: 50px;
-    text-align: left;
-    padding-left: 50px;
+    /* text-align: left;
+    padding-left: 50px; */
 }
 
-.RightContent .ContactInfoElement h2{
-    display: inline-block;
+.LeftContent .ContactInfoElement h2{
+    /* display: inline-block; */
     padding-left: 10px;
 }
 
+.LeftContent .ContactInfoElement svg{
+    width: 3em;
+    height: 3em;
+}
+
+
+/* when width of screen is smaller than 850px 
+hide menu items and show dropdown */
+@media only screen and (max-width: 850px) {
+    .Contact .Dialog{
+        display: block;
+        max-width: 95%;
+        max-height: 75vh;
+    }
+    .Contact .RightContent{
+        width: 100%;
+        min-width: 100%;
+        padding-top: 20px;
+    }
+    .Contact .LeftContent{
+        width: 100%;
+        min-width: 100%;
+        border-right: 0px;
+        border-bottom: 1px #ababaf7a solid;
+    }
+        
+  }
