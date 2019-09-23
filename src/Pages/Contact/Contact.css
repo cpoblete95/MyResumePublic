@@ -1,6 +1,6 @@
 .Contact{
     height: 100%;
-    background: white;
+    /* background: white; */
 }
 
 .Contact .Modal{
@@ -28,6 +28,7 @@
 .Contact .LeftContent{
     float: left;
     width: 50%;
+    height: 100%;
     border-right: 1px #ababaf7a solid;
     min-width: 460px;
     /* position: absolute;
@@ -47,11 +48,16 @@
     width: 43%;
     border-radius: 6%;
     box-shadow: 1px 4px 27px -6px rgba(0,0,0,0.75);
+    margin-top: 30px;
 }
 
 .Contact h1{
     font-weight: bolder;
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+.Contact form{
+    margin-top: 30px;
 }
 
 .Contact hr {
@@ -75,13 +81,6 @@
     width: 77%;
     font-size: 16px;
     margin: auto;
-}
-
-.RightContent svg{
-    font-size: 50px;
-    max-width: 50px;
-    float: left;
-    /* margin: 0 0 20px 20px; */
 }
 
 .LeftContent .ContactInfoElement{
@@ -115,12 +114,14 @@ hide menu items and show dropdown */
         width: 100%;
         min-width: 100%;
         padding-top: 20px;
+        max-height: 60vh;
     }
     .Contact .LeftContent{
         width: 100%;
         min-width: 100%;
         border-right: 0px;
         border-bottom: 1px #ababaf7a solid;
+        max-height: 60vh;
     }
         
   }

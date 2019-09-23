@@ -16,7 +16,7 @@ const App = () => {
     })
     return(
         <div className = {styles.App}>
-            <LoadingPage loading = {loading}/>
+            {/* <LoadingPage loading = {loading}/> */}
             <Router>
                 <Navbar/>
                 <Main/>

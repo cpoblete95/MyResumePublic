@@ -61,11 +61,12 @@ const Contact = () => {
             when={shouldBlockNavigation}
             message={() => `Are you sure you want to leave the page, you have unfinished changes?`}
             />
-            <div className = {styles.Modal}>
-                <div className = {styles.Dialog}>
+            {/* <div className = {styles.Modal}>
+                <div className = {styles.Dialog}> */}
                     {/* LEFT CONTENT */}
                     <div className = {styles.LeftContent}>
                         <h1>Christopher Poblete</h1>
+                        <hr/>
                         <img className = {styles.ContactAvatar} src = {RealAvatar}></img>
                         {/* <p>Dynamic Software Engineer with 2+ years of experience. Skilled at developing turnkey, testable and efficient code. Implemented Jasmine unit test cases for a UnitedHealth Group project that covers 97% AngularJS code that helps prevent future issues. A conscientious fast learner who can easily adapt to changing business requirements.</p> */}
                         <div className = {styles.ContactInfoElement}>
@@ -137,8 +138,8 @@ const Contact = () => {
                         </div> */}
                     </div>
                 </div>
-            </div>
-        </div>
+        //     </div>
+        // </div>
     )
 }
 
