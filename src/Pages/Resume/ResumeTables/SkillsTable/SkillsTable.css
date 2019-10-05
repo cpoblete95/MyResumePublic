@@ -1,0 +1,20 @@
+.SkillsTable th, td, tr{
+    color:white;
+}
+
+.SkillsTable th{
+    max-width: 55px;
+}
+
+.SkillsTable p{
+    margin-bottom: 0px;
+}
+
+/* when width of screen is smaller than 850px 
+hide menu items and show dropdown */
+@media only screen and (max-width: 850px) {
+    .SkillsTable th{
+        max-width: 100px;
+    }
+        
+  }

@@ -9,6 +9,7 @@
     width: 30%;
     height: 100%;
     background: white;
+    overflow: auto;
 }
 
 .Resume .LeftContent h1{
@@ -58,9 +59,40 @@
     height: 100%;
     padding: 10px;
     background: #000000d9;
+    overflow: auto;
 }
 
 .Resume .RightContent h1{
     float: left;
     color: white;
 }
+
+.Resume .RightContent hr{
+    float: left;
+    color: white;
+    clear: both;
+    width: 100%;
+    background-color: white;
+}
+
+/* when width of screen is smaller than 850px 
+hide menu items and show dropdown */
+@media only screen and (max-width: 850px) {
+    .Resume .RightContent{
+        width: 100%;
+        min-width: 100%;
+        padding-top: 20px;
+        height: 100%;
+        max-height: 76vh;
+    }
+    .Resume .LeftContent{
+        width: 100%;
+        min-width: 100%;
+        border-right: 0px;
+        border-bottom: 1px #ababaf7a solid;
+        height: 100%;
+        max-height: 76vh;
+        /* max-height: 72vh; */
+    }
+        
+  }

@@ -1,0 +1,9 @@
+.ExperienceTable th, td{
+    color:white;
+}
+
+
+.ExperienceTable h3{
+    font-size: 1.3rem;
+    font-style: italic;
+}
