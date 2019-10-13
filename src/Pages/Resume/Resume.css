@@ -16,6 +16,7 @@
     float: left;
     margin-top: 100px;
     padding-left: 10px;
+    clear: both;
 }
 
 .Resume .LeftContent h3{
@@ -23,12 +24,14 @@
     margin-top: 10px;
     padding-left: 10px;
     color: #b1b1b1;
+    clear: both;
 }
 
 .Resume .LeftContent p{
     clear: both;
     text-align: justify;
     padding: 0 10px;
+    font-size: 1.2em;
 }
 
 .Resume .LeftContent hr{
@@ -65,6 +68,10 @@
 .Resume .RightContent h1{
     float: left;
     color: white;
+}
+
+.Resume .RightContent p{
+    font-size: 1.2em;
 }
 
 .Resume .RightContent hr{

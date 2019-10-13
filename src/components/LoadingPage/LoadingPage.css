@@ -11,7 +11,7 @@
 }
 
 .LoadingPage.MainTransition{
-    top: -800px;
+    top: -1000px;
     transition: 2s;
 }
 

@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styles from './Dropdown.css';
 
-import {Link} from 'react-router-dom';
-
 import DropdownMenu from './DropdownMenu/DropdownMenu';
 
 const Dropdown = (props) => {    

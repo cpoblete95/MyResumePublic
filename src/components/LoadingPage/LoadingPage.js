@@ -6,10 +6,12 @@ const LoadingPage = (props) => {
     const [showMain, setShowMain] = useState(false);
 
     //when not loading have a small delay to show transtion of "welcome"
-    if(!props.loading)
-    {
-        setTimeout(() => { setShowWelcome(true) }, 100);
-    }
+    // if(!props.loading)
+    // {
+    //     setTimeout(() => { setShowWelcome(true) }, 100);
+    // }
+    setTimeout(() => { setShowWelcome(true) }, 100);
+
     //after showing welcome wait three seconds then do another transition
     if(showWelcome)
     {
@@ -19,15 +21,14 @@ const LoadingPage = (props) => {
     return(
         <div className = {`${styles.LoadingPage} ${showMain? styles.MainTransition : ""}`}>
             <div className = {styles.Spinner}>
-                {props.loading ?
+                {/* {props.loading ?
                     <div className="spinner-border" style = {{width: "6em", height: "6em"}} role="status">
                         <span className="sr-only">Loading...</span>
                     </div>
-                     :
+                     : */}
                      <div className = {`${styles.NotLoading} ${showWelcome ? styles.Transition : "" }`}>
                         Welcome!
                      </div>
-                }
                 </div>             
         </div>
     )

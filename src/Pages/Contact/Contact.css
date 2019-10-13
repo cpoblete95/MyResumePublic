@@ -109,6 +109,14 @@
     height: 3em;
 }
 
+.RightContent .error{
+    color: red;
+}
+
+.RightContent .success{
+    color: green;
+}
+
 
 /* when width of screen is smaller than 850px 
 hide menu items and show dropdown */

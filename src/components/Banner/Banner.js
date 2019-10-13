@@ -21,9 +21,11 @@ const Banner = () => {
                     <a href = "https://www.linkedin.com/in/christopher-poblete-0a67a1138/" target = "_blank">
                         <FontAwesomeIcon icon={['fab', 'linkedin']} />
                     </a>
-                    {/* <a href = "https://github.com/cpoblete95" target = "_blank">
-                        <FontAwesomeIcon icon={['fab', 'github-square']} />
-                    </a> */}
+
+                    {/* instagram */}
+                    <a href = "https://www.instagram.com/_chrispoblete_/" target = "_blank">
+                        <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    </a>
             </div>
 
             

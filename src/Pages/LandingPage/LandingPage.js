@@ -5,6 +5,7 @@ import Avatar from '../../Images/Avatar.png';
 import Intro from '../../Images/Intro.png';
 
 import Banner from '../../components/Banner/Banner';
+import LoadingPage from '../../components/LoadingPage/LoadingPage';
 
 const LandingPage = () => {
     useEffect(() => {
@@ -14,7 +15,7 @@ const LandingPage = () => {
     
     return(
         <div className = {styles.LandingPage}>
-
+            <LoadingPage/>
             <img className = {styles.AvatarImg} src = {Avatar}></img>
             <img className = {styles.IntroImg} src = {Intro}></img>
             <Banner/>

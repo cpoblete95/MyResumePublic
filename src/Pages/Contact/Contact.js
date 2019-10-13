@@ -10,6 +10,7 @@ import emailMask from 'text-mask-addons/dist/emailMask'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Prompt } from 'react-router'
 
+import EmailService from '../../Services/EmailService';
 
 const Contact = () => {
     const onUnload = (event) => { // the method that will be used for both add and remove event
@@ -28,9 +29,14 @@ const Contact = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
+    // const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [shouldBlockNavigation, setShouldBlockNavigation] = useState(false);
+    const [errorMessage, setErrorMessage] = useState({
+        show: false,
+        error: false,
+        message:""
+    });
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -53,7 +59,21 @@ const Contact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        //TODO handle email submit
+        var postData = {
+            from_name: name,
+            from_email: email,
+            message: message
+        };
+        EmailService.sendEmail(postData).then(data => {
+            if(data === true){
+                setName("");
+                setEmail("");
+                setMessage("");
+                setErrorMessage({show:true, error:false, message: "Email successfully sent!"})
+            }else{
+                setErrorMessage({show:true, error:true, message: "We had a problem sending your email, please try again later!"})
+            }
+        });
     }
     return(
         <div className = {styles.Contact}>
@@ -61,85 +81,70 @@ const Contact = () => {
             when={shouldBlockNavigation}
             message={() => `Are you sure you want to leave the page, you have unfinished changes?`}
             />
-            {/* <div className = {styles.Modal}>
-                <div className = {styles.Dialog}> */}
-                    {/* LEFT CONTENT */}
-                    <div className = {styles.LeftContent}>
-                        <h1>Christopher Poblete</h1>
-                        <hr/>
-                        <img className = {styles.ContactAvatar} src = {RealAvatar}></img>
-                        {/* <p>Dynamic Software Engineer with 2+ years of experience. Skilled at developing turnkey, testable and efficient code. Implemented Jasmine unit test cases for a UnitedHealth Group project that covers 97% AngularJS code that helps prevent future issues. A conscientious fast learner who can easily adapt to changing business requirements.</p> */}
-                        <div className = {styles.ContactInfoElement}>
-                                <FontAwesomeIcon icon={['far', 'envelope']} />
-                                <h2>chrispoblete95@gmail.com</h2>
-                        </div>
-                    </div>
-
-                    {/* RIGHT CONTENT */}
-                    <div className = {styles.RightContent}>
-                        <h1>Contact Me</h1>
-                        <hr/>
-                        <form onSubmit = {handleSubmit}>
-                            {/* Name */}
-                            <Input
-                            type = "text"
-                            name = "name"
-                            label = "Name:"
-                            placeholder = "John Smith"
-                            value = {name}
-                            onChange = {handleChange}
-                            />  
-
-                            {/* Email */}
-                            <Input
-                            type = "text"
-                            name = "email"
-                            label = "Email:"
-                            placeholder = "johnsmith@gmail.com"
-                            mask = {emailMask}
-                            value = {email}
-                            onChange = {handleChange}
-                            /> 
-                        
-                            {/* Subject */}
-                            <Input
-                            type = "text"
-                            name = "subject"
-                            label = "Subject:"
-                            placeholder = "Hey Chris!"
-                            value = {subject}
-                            onChange = {handleChange}
-                            /> 
-
-                            <TextArea
-                            name = "message"
-                            label = "Message:"
-                            placeholder = "Hey Chris I would love to connect!"
-                            value = {message}
-                            onChange = {handleChange}
-                            />
-
-                            <button type = "submit">Submit</button>
-                        </form>
-                        {/* <div className = {styles.ContactInfo}>
-                            <div className = {styles.ContactInfoElement}>
-                                <FontAwesomeIcon icon={['fas', 'mobile-alt']} />
-                                <h2>1231231231</h2>
-                            </div>
-                            <div className = {styles.ContactInfoElement}>
-                                <FontAwesomeIcon icon={['far', 'building']} />
-                                <h2>1231231231231</h2>
-                            </div>
-
-                            <div className = {styles.ContactInfoElement}>
-                                <FontAwesomeIcon icon={['far', 'envelope']} />
-                                <h2>123123123@gmail.com</h2>
-                            </div>
-                        </div> */}
+                {/* LEFT CONTENT */}
+                <div className = {styles.LeftContent}>
+                    <h1>Christopher Poblete</h1>
+                    <hr/>
+                    <img className = {styles.ContactAvatar} src = {RealAvatar}></img>
+                    <div className = {styles.ContactInfoElement}>
+                            <FontAwesomeIcon icon={['far', 'envelope']} />
+                            <h2>chrispoblete95@gmail.com</h2>
                     </div>
                 </div>
-        //     </div>
-        // </div>
+
+                {/* RIGHT CONTENT */}
+                <div className = {styles.RightContent}>
+                    <h1>Contact Me</h1>
+                    <hr/>
+                    {errorMessage.show && 
+                        <p className = {errorMessage.error === true ? styles.error : styles.success }>{errorMessage.message}</p>}
+                    <form onSubmit = {handleSubmit}>
+                        {/* Name */}
+                        <Input
+                        type = "text"
+                        name = "name"
+                        label = "Name:"
+                        placeholder = "John Smith"
+                        value = {name}
+                        onChange = {handleChange}
+                        required = {true}
+                        />  
+
+                        {/* Email */}
+                        <Input
+                        type = "text"
+                        name = "email"
+                        label = "Email:"
+                        placeholder = "johnsmith@gmail.com"
+                        mask = {emailMask}
+                        value = {email}
+                        onChange = {handleChange}
+                        required = {true}
+                        /> 
+                    
+                        {/* Subject */}
+                        {/* <Input
+                        type = "text"
+                        name = "subject"
+                        label = "Subject:"
+                        placeholder = "Hey Chris!"
+                        value = {subject}
+                        onChange = {handleChange}
+                        />  */}
+
+                        <TextArea
+                        name = "message"
+                        label = "Message:"
+                        placeholder = "Hey Chris I would love to connect!"
+                        value = {message}
+                        onChange = {handleChange}
+                        required = {true}
+                        />
+
+                        <button type = "submit">Submit</button>
+                    </form>
+                </div>
+            </div>
     )
 }
 

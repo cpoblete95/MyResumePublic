@@ -4,19 +4,11 @@ import {BrowserRouter as Router} from "react-router-dom"
 
 import Navbar from '../components/Navbar/Navbar';
 import Main from '../components/Main/Main';
-import LoadingPage from '../components/LoadingPage/LoadingPage';
-
 
 const App = () => {
-    const [loading, setLoading] = useState(true);
-    setTimeout(function(){ setLoading(false) }, 3000);
-
-    useEffect(() => {
-        console.log("APP RENDERING!")
-    })
+    // setTimeout(function(){ setLoading(false) }, 3000);
     return(
         <div className = {styles.App}>
-            {/* <LoadingPage loading = {loading}/> */}
             <Router>
                 <Navbar/>
                 <Main/>
