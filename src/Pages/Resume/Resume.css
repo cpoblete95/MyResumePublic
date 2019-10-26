@@ -44,10 +44,11 @@
 }
 
 .Resume .LeftContent img{
+    display: block;
     width: 45%;
     border-radius: 6%;
     box-shadow: 1px 4px 27px -6px rgba(0,0,0,0.75);
-    margin-top: 50px;
+    margin: 50px auto;
 }
 .Resume .RightContent{
     float: right;
@@ -63,6 +64,8 @@
     padding: 10px;
     background: #000000d9;
     overflow: auto;
+    margin-bottom: 15px;
+    max-height: 89vh;
 }
 
 .Resume .RightContent h1{

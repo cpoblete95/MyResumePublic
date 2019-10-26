@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styles from './AboutMe.css';
-import AboutMeImage from '../../Images/AboutMeImage.jpg';
+import Personal from '../../Images/Personal.jpg';
 import {Link} from 'react-router-dom';
 
 const aboutMeText = {
@@ -18,7 +18,7 @@ const AboutMe = () => {
     return(
         <div className = {styles.AboutMe}>
             <div className = {styles.AboutMeContainer}>
-                <img src = {AboutMeImage}></img>
+                <img src = {Personal}></img>
                 <div className = {styles.description}>
                     <h1>{aboutMeText.header}</h1>
                     <p>{aboutMeText.subHeader}</p>

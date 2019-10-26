@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build:prod": "NODE_ENV=production webpack -p --mode production --config /webpackConfig/prod.config.js",
     "start": "webpack-dev-server --content-base  src"
   },
   "author": "",
@@ -19,6 +20,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
+    "react-router-transition": "^1.4.0",
     "react-text-mask": "^5.4.3",
     "save": "^2.4.0",
     "text-mask-addons": "^3.8.0"

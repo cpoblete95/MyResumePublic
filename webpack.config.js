@@ -3,7 +3,8 @@ const path = require ('path');
 
 //all configuration goes in here
 module.exports = {
-    entry: __dirname + '/src/index.js',
+    context: __dirname,
+    entry:path.resolve( __dirname + "/src/index.js"),
     module: {
         rules:[
             {
@@ -58,8 +59,6 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-        // contentBase: './',
-        // port: 9000,
         host: '0.0.0.0'
     },
     devtool: 'source-map', //will show code in development easier for debugging
@@ -67,12 +66,5 @@ module.exports = {
         path: path.resolve(__dirname, "./src/webpackBuild"),
         publicPath: path.resolve(__dirname, "/webpackBuild"),
         filename: "resume.min.js",
-    },
-    // plugins:[
-    //     new HtmlWebpackPlugin({
-    //         template: __dirname + '/src/index.html',
-    //         filename: 'index.html',
-    //         inject: 'body'
-    //     })
-    // ]
+    }
 }
