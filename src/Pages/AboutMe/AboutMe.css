@@ -32,4 +32,8 @@
     .AboutMeContainer{
         display: block;
     }
+
+    .AboutMe img{
+        max-width: 50vw;
+    }
   }

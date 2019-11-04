@@ -14,6 +14,11 @@ const Navbar = () => {
         return;
     };
 
+    const handlePortofolioClick = (event) => {
+        window.location = "/";
+        return;
+    };
+
     return(
         <div className = {styles.Navbar}>
             <ul>
@@ -23,7 +28,7 @@ const Navbar = () => {
                     handleDropdownClick = {handleDropdownClick}
                     /> 
                 </li>
-                <li className = {styles.NavbarTitle}><p>Christopher's Portfolio</p></li>
+                <li onClick = {handlePortofolioClick} className = {styles.NavbarTitle}><p>Christopher's Portfolio</p></li>
                 <li><Link to = "/contact">Contact</Link></li>
                 {/* <li><Link to = "/projects">Projects</Link></li> */}
                 <li><Link to = "/aboutMe">About Me</Link></li>

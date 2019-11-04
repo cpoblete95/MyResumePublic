@@ -93,7 +93,6 @@ hide menu items and show dropdown */
         min-width: 100%;
         padding-top: 20px;
         height: 100%;
-        max-height: 76vh;
     }
     .Resume .LeftContent{
         width: 100%;
@@ -101,8 +100,10 @@ hide menu items and show dropdown */
         border-right: 0px;
         border-bottom: 1px #ababaf7a solid;
         height: 100%;
-        max-height: 76vh;
-        /* max-height: 72vh; */
+    }
+
+    .Resume .RightContent .RightContentBox{
+        max-height: 100%;
     }
         
   }
