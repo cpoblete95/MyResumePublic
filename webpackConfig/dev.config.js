@@ -1,16 +1,16 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require ('path');
+const path = require('path');
 
 //all configuration goes in here
 module.exports = {
     context: __dirname,
-    entry:path.resolve( __dirname + "/src/index.js"),
+    entry:path.join( __dirname + "/../src/index.js"),
+    devtool: 'inline-source-map', //will show code in development easier for debugging
     module: {
         rules:[
-            {
-                test: /\.js$/, 
-                exclude: /node_modules/,
-                loader: 'babel-loader'
+            {      
+              test: /\.(js|jsx)$/,      
+              exclude: /node_modules/,      
+              use: ['babel-loader', 'eslint-loader'] // include eslint-loader    
             },
             {
                 test: /\.css$/,
@@ -59,12 +59,13 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-        host: '0.0.0.0'
+        host: '0.0.0.0',
+        contentBase: path.join(__dirname, '/../src') //where your content will be hosted from aka where index.html file is
     },
-    devtool: 'source-map', //will show code in development easier for debugging
     output:{
-        path: path.resolve(__dirname, "./src/webpackBuild"),
+        path: path.resolve(__dirname, "../src/webpackBuild"),
         publicPath: path.resolve(__dirname, "/webpackBuild"),
         filename: "resume.min.js",
-    }
+    },
+  
 }

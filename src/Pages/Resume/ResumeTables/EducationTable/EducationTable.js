@@ -2,11 +2,15 @@ import React from 'react';
 import styles from './EducationTable.css';
 
 const EducationTable = (props) => {
-    return(
-        <table className = {`${"table table-borderless"} ${styles.EducationTable}`}>
+    return (
+        <table className={`${'table table-borderless'} ${styles.EducationTable}`}>
             <tbody>
                 <tr>
-                    <th scope="row"> Rutgers University, New Brunswick, New Jersey – B.S Computer Science, May 2017</th>
+                    <th scope="row">
+                        {' '}
+            Rutgers University, New Brunswick, New Jersey – B.S Computer
+            Science, May 2017
+                    </th>
                 </tr>
                 {/* <tr>
                     <th scope="row">Frameworks</th>
@@ -17,7 +21,7 @@ const EducationTable = (props) => {
                 </tr> */}
             </tbody>
         </table>
-    )
-}
+    );
+};
 
 export default EducationTable;

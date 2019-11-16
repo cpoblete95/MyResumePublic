@@ -1,0 +1,22 @@
+{  
+    "parser": "babel-eslint",
+    "extends": "react",  
+    "env": {    
+        "browser": true,    
+        "node": true  
+    },  
+    "settings": {    
+        "react": {      
+            "version": "detect",
+        }  
+    },
+    "rules": {
+        "react/prop-types": 0
+    }
+}
+/**
+ * Hey ESLint, please parse the code using babel-eslint before you check it, 
+ * and when you’re checking it, please check if all the rules from our React rules config is passed.
+ * Take global variables from the environment of browser and node. Oh, and if it’s React code, take 
+ * the version from the module itself. That way the user won’t have to specify the version manually.
+ */
