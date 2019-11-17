@@ -9,6 +9,7 @@
     "dev": "webpack-dev-server --config webpackConfig/dev.config.js",
     "build:dev": "webpack --config webpackConfig/dev.config.js",
     "build:prod": "webpack -p --mode production --config webpackConfig/prod.config.js",
+    "build:project" : "aws s3 cp --recursive ./build s3://www.christopherpoblete.com",
     "start": "webpack-dev-server --content-base  src"
   },
   "author": "",
@@ -42,9 +43,9 @@
     "eslint-plugin-react": "^7.16.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "prettier": "^1.19.1",
     "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.0",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.6",

@@ -3,8 +3,8 @@ const version = require("../package.json").version;
 const webpack = require('webpack');
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 //all configuration goes in here
 module.exports = {
@@ -44,6 +44,9 @@ module.exports = {
                 test: /\.css$/,
                 loader: 'css-loader',
                 exclude: /bootstrap.min.css$/,
+                options: {
+                  modules: true
+                }
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
@@ -73,8 +76,8 @@ module.exports = {
     },
     output:{
         path: path.resolve(__dirname, "../webpackBuildProd"),
-        publicPath: path.resolve(__dirname, "/webpackBuild"),
-        filename: "resume.min.js",
+        publicPath: path.resolve(__dirname, "/webpackBuildProd"),
+        filename: "resume-" + version + ".min.js",
     },
     plugins:[
         new webpack.DefinePlugin({ // <-- key to reducing React's size
@@ -83,17 +86,13 @@ module.exports = {
             "__VERSION__": JSON.stringify(require("../package.json").version)
           }
         }),
-        // new HtmlWebpackPlugin(),
-        // new DynamicCdnWebpackPlugin(),
-        // new webpack.optimize.AggressiveMergingPlugin(),
+        new HtmlWebpackPlugin(),
         new BundleAnalyzerPlugin(), //ui for analyzing produciton build
-        // new webpack.optimize.OccurrenceOrderPlugin(),
         // new MiniCssExtractPlugin({
         //   // filename: "[name]." + version + "-min.css",
           
         //   chunkFilename: "[id].css",
         //   allChunks: true
         // })
-      
       ]
 }
