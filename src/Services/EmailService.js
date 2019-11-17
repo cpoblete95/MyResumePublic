@@ -8,8 +8,8 @@ const EmailService = {
             message_html: postData.message
         };
 
-        var serviceId = 'default_service';
-        var templateId = 'template_Ay6vtua1';
+        var serviceId = 'hidden for public view';
+        var templateId = 'Hidden for public view';
         return emailjs
             .send(serviceId, templateId, templateParams)
             .then((data) => {
